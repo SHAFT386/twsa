@@ -1,0 +1,28 @@
+/* Team hero: cream hero with curved auto-sliding photo row */
+.tm-hero{background:#FDF9EE;color:#1B1B1B;padding:130px 0 56px;text-align:center;overflow:hidden}
+.tm-hero h1{font-weight:500;letter-spacing:-.02em;line-height:1.1}
+.tm-hero h1 em{display:block;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(2.2rem,5vw,3.4rem);color:#333}
+.tm-hero h1 span{display:block;font-family:var(--body);font-weight:500;font-size:clamp(1.9rem,4.4vw,3rem);margin-top:2px}
+.tm-hero p{max-width:460px;margin:18px auto 24px;color:#6b6b66;font-size:1rem}
+.tm-btn{display:inline-flex;align-items:center;gap:14px;background:#111;color:#fff;text-decoration:none;padding:8px 8px 8px 24px;border-radius:40px;font-weight:600;font-size:.9rem}
+.tm-btn i{font-style:normal;width:36px;height:36px;border-radius:50%;background:#444;display:grid;place-items:center}
+.tm-stage{position:relative;height:340px;margin:34px 0 20px;perspective:1400px}
+.tm-card{position:absolute;top:50%;left:50%;width:170px;border-radius:18px;overflow:hidden;background:#ddd;box-shadow:0 10px 30px rgba(0,0,0,.18);transition:transform .9s cubic-bezier(.4,.1,.2,1),height .9s cubic-bezier(.4,.1,.2,1),opacity .6s}
+.tm-card img{width:100%;height:100%;object-fit:cover}
+.tm-feats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:36px}
+.tm-feats>div{padding:4px 28px;border-left:1px solid #E3DFD0}
+.tm-feats>div:first-child{border-left:0}
+.tm-feats h3{font-size:1rem;font-weight:500;margin-bottom:8px}
+.tm-feats p{margin:0;font-size:.82rem;color:#7a7a74}
+body.dark-mode .tm-hero{background:#14151a;color:#f1f1f1}
+body.dark-mode .tm-hero h1 em{color:#ddd}
+body.dark-mode .tm-btn{background:#fff;color:#111}
+body.dark-mode .tm-feats>div{border-color:#2b2d35}
+@media (max-width:700px){
+  .tm-hero{padding:110px 0 40px}
+  .tm-stage{height:250px}
+  .tm-card{width:105px}
+  .tm-feats{grid-template-columns:1fr;gap:18px}
+  .tm-feats>div{border-left:0;border-top:1px solid #E3DFD0;padding-top:16px}
+  .tm-feats>div:first-child{border-top:0}
+}
